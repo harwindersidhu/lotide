@@ -19,7 +19,7 @@ const countLetters = function(sentence) {
     }
   }
   return result;
-}
+};
 
 let resultCount = countLetters("lighthouse in the house");
 console.log(resultCount);
