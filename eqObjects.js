@@ -71,3 +71,5 @@ assertEqual(eqObjects(de, ed), false);
 const efgh = { e: ["2", 3], f: [2, 3], g: [3, 5], h: "hh"};
 const fehg = { f: [2, 3], e: ["2", 3], h: "hh", g: [3, 5]};
 assertEqual(eqObjects(efgh, fehg), true);
+
+module.exports = eqObjects;

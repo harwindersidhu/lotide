@@ -26,3 +26,5 @@ console.log(resultCount);
 
 assertEqual(resultCount["i"], 2);
 assertEqual(resultCount["o"], 2);
+
+module.exports = countLetters;
