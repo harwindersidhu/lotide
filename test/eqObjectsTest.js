@@ -45,5 +45,16 @@ describe("#eqObjects", () => {
   it("returns true for objects efgh and fehg", () => {
     assert.equal(eqObjects(efgh, fehg), true);
   });
-});
 
+  it("returns true for objects { a: { z: 1 }, b: 2 } and { a: { z: 1 }, b: 2 }", () => {
+    assert.equal(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);
+  });
+
+  it("returns false for objects { a: { y: 0, z: 1 }, b: 2 } and { a: { z: 1 }, b: 2 }", () => {
+    assert.equal(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false);
+  });
+
+  it("returns false for objects { a: { y: 0, z: 1 }, b: 2 } and { a: 1, b: 2 }", () => {
+    assert.equal(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false);
+  });
+});

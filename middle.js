@@ -1,3 +1,4 @@
+//Function that takes in an array and returns middle most element of the array.
 const middle = function(array) {
   let middleArray = [];
   if (array.length <= 2) {

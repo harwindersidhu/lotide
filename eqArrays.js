@@ -1,5 +1,4 @@
 //This functions check if two arrays are equal or not. It works for nested arrays as well.
-
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;

@@ -1,3 +1,4 @@
+//Function that takes in a string and returns all indices of letter positions in the string.
 const letterPositions = function(sentence) {
   const results = {};
   // logic to update results here

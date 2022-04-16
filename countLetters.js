@@ -7,6 +7,7 @@ const assertEqual = function(actual, expected) {
   
 };
 
+//Function that takes in a sentence and returns a count of each of the letters in the sentence.
 const countLetters = function(sentence) {
   let result = {};
   for (let character of sentence) {
