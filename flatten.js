@@ -1,25 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-
-const assertArraysEqual  = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${array1} !== ${array2}`);
-  }
-  
-};
-
+// The following flatten don't work for nested arrays.
 const flatten = function(array) {
   let flattenArray = [];
   for (let element of array) {
@@ -34,7 +13,18 @@ const flatten = function(array) {
   return flattenArray;
 };
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+
+// //Following flatten works for nested arrays as well.
+// const flattenArray = [];
+// const flatten = function(array) {
+//   array.forEach((item) => {
+//     if (Array.isArray(item)) {
+//       flatten(item);
+//     } else {
+//       flattenArray.push(item);
+//     }
+//   });
+//   return flattenArray;
+// };
 
 module.exports = flatten;
